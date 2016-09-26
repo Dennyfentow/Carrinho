@@ -2,7 +2,7 @@
 
 //local onde esta rodando o php 
 //Testes...
-$hostname = "localhosst";
+$hostname = "localhost";
 $username1 = "root";
 $senha = "usbw";
 $banco = "almoxarifado";
