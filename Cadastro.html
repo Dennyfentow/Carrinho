@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Pagina Inicial</title>
+        <meta charset="utf-8">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        <link href="css/floats.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="ico/favicon.ico"/>
+        <link rel="icon" type="image/gif" href="ico/favicon.ico"/>
+
+        <script src="js/linkagem_entre_paginas.js" type="text/javascript"></script>
+
+        <script>
+            function validar_cadastro() {
+                var nome = formcadastro.nome.value;
+                var usuario = formcadastro.usuario.value;
+                var senha = formcadastro.senha.value;
+                var email = formcadastro.email.value;
+                var cidade = formcadastro.cidade.value;
+                var telefone = formcadastro.telefone.value;
+                var estado = formcadastro.estado.value;
+
+                if (nome === null || nome === " ") {
+                    alert("Preencha o campo nome!");
+                    formcadastro.nome.focus();
+                    return false;
+                }
+                if (nome.length >= 50) {
+                    alert("Campo nao pode possuir mais de 50 caracteres");
+                    formcadastro.nome.focus();
+                    return false;
+                }
+
+                if (usuario === null || usuario === " ") {
+                    alert("Preencha o campo nome de usuario!");
+                    formcadastro.usuario.focus();
+                    return false;
+                }
+                if (usuario.length >= 15) {
+                    alert("O campo usuario nao pode possuir mais de 15 caracteres");
+                    formcadastro.usuario.focus();
+                    return false;
+                }
+                if (senha === null || senha === " ") {
+                    alert("Preencha o campo senha!");
+                    formcadastro.senha.focus();
+                    return false;
+                }
+                if (senha.length >= 15) {
+                    alert("Campo nao pode conter mais de 15 caracteres!");
+                    formcadastro.senha.focus();
+                    return false;
+                }
+                if (email === " " || email === null) {
+                    alert("Preencha o campo email!");
+                    formcadastro.email.focus();
+                    return false;
+                }
+                if (email.length >= 4) {
+                    alert("Campo nao pode conter mais de 30 caracteres!");
+                    formcadastro.email.focus();
+                    return false;
+                }
+                if (cidade === " " || cidade === null) {
+                    alert("Preencha o campo cidade!");
+                    formcadastro.cidade.focus();
+                    return false;
+                }
+                if (cidade.length >= 20) {
+                    alert("Campo nao pode conter mais de 20 caracteres!");
+                    formcadastro.cidade.focus();
+                    return false;
+                }
+
+                if (estado === " " || estado === null) {
+                    alert("Preencha o campo cidade!");
+                    formcadastro.estado.focus();
+                    return false;
+                }
+                if (estado.length >= 2) {
+                    alert("Campo nao pode conter mais de 2 caracteres!");
+                    formcadastro.estado.focus();
+                    return false;
+                }
+
+                if (telefone === " " || telefone === null) {
+                    alert("Preencha o campo telefone!");
+                    formcadastro.telefone.focus();
+                    return false;
+                }
+                if (telefone.length >= 2) {
+                    alert("O campo telefone nao pode conter mais de 13 caracteres!");
+                    formcadastro.telefone.focus();
+                    return false;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="interface">
+            <h1>Cadastro de Usuário</h1>
+            <form name="formcadastro" method="POST" action="php/CadastroIncluir.php">
+
+                <table>
+                    <tbody>
+                        <tr><td><p>Insira o Nome: </p></td>
+                            <td><p><input type="text" name="nome" maxlength="30"/></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Insira o usuário: </p></td>
+                            <td><p><input type="text" name="usuario" maxlength="20"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Insira a senha: </p></td>
+                            <td><p><input type="password" name="senha" maxlength="15"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Insira o email: </p></td>
+                            <td><p><input type="text" name="email" maxlength="40"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Insira o telefone: </p></td>
+                            <td><p><input type="text" name="telefone" maxlength="40"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Insira a cidade: </p></td>
+                            <td><p><input type="text" name="cidade" ></p></td>
+                        </tr>
+                        <tr>
+                            <td><p >Insira o a sigla do estado: </p> </td> 
+                            <td><p><input type="text" name="estado" maxlength="2"></p></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><input type="submit" class="butaoLogin" value="Salvar Cadastro" onclick="return validar_cadastro()"  name="btnLogin"></p>
+            </form>
+            <input class="butaoVoltarPHP" type="submit" onclick="irIndex()" Value="Pagina Inicial!">
+        </div>
+    </body>
+</html>

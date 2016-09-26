@@ -1,0 +1,14 @@
+/*Regula o Tamanho do Iframe na Pagina*/
+html, body, div.divIFrame {
+    margin:0; 
+    padding:0;
+    height:100%;
+}
+div.divIFrame {
+    height:100%;
+}
+iframe {
+    display:block;
+    width:100%;
+    border:solid 2px;
+}

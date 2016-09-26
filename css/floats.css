@@ -1,0 +1,22 @@
+div.float_esquerda {
+    position: absolute;
+    display: block;
+    float: left;
+}
+div.float_direita {
+    position: relative;
+    display: block;
+    float: right;
+}
+div.float_principal_login {
+    position: relative;
+    width: 350px;
+}
+div.float_principal {
+    position: relative;
+    width: 300px;
+}
+.cad_linha {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,51 @@
+/*
+    Estilo Para a Pagina do iframe de Realizar Pedidos
+*/
+/*Paranaueres*/
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+body {
+    
+}
+div.interfacePedido {
+    
+}
+h1 {
+    
+}
+
+tr.LinhaProdutos { /*Linhas dos produtos que estão exibidos*/
+    font-family: 'times new roman';
+    font-size: 12pt;
+}
+
+p.pProdEscolhido { /*Linhas da Lista dos Produto do Carrinho*/
+    font-family: 'times new roman';
+    font-size: 12pt;
+    margin: 0px;
+    font-stretch: condensed;
+}
+
+input.btnPedidos {/*Botões Realizar Pedido e Carrinho*/
+    
+}
+
+.thTitulo {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.codJs {
+    text-align: center;
+}
+.NomeJs {
+    text-align: left;
+}
+
+.precoJs {
+    
+}
+.precoCSS {
+    width: 90px;
+    text-align: right;
+    margin-right: 10px;
+}
+

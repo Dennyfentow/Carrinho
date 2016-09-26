@@ -1,0 +1,410 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+h1 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif; 
+
+}
+h3 {
+    text-indent: 10px; 
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+p{
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+/*================= CSS PRINCIPAL ================*/
+.interface{
+
+    width: 600px;
+    border:  solid 2px rgba(0,0,0,.7);
+    background: white;
+    padding: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    height:100%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.6);
+}
+
+body{
+
+    background-image: url("../Imgs/background.jpg");
+    background-repeat: no-repeat;
+    height:100%;
+
+}
+gif{
+    position: relative;
+    width: 1000px;
+}
+
+/*Div Opcções*/
+div#DivOpcoes {
+    width: 170px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+div#DivOpcoes ul.ul_Opcoes{
+    text-align: center;
+}
+/*Estado Inicial das Divs*/
+div#DivInserir {
+    display: none;
+}
+div#DivAlterar {
+    display: none;
+}
+div#DivExcluir {
+    display: none;
+}
+div#DivConsultar {
+    display: none;
+}
+.cssTemplate {
+
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: none;
+
+
+}
+
+/*CONFIGURAÇÃO DAS OPÇÕES EM RADIO BUTTON*/
+/*CSS NOS RADIOS BUTTONS*/
+label.lblradio {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /*transition: // not padding
+     background 0.2s,
+     color 0.2s,
+     top 0.2s,
+     bottom 0.2s,
+     right 0.2s,
+     left 0.2s;*/
+    text-align: center;
+}
+
+/*CSS CONFIGURAR O FORMATO DAS LABELS*/
+label > input{ /* Ocutar Radios */
+    display:none;
+}
+label > input + img{ /* Estilo Das Imagens */
+    cursor: pointer;
+    border:2px solid transparent;
+}
+img:hover {
+    border: 2px #c6c7ca solid;
+    transition: 0.2s;
+}
+label > input:checked + img{ /* (CHECKED) Estilo Das Imagens */
+    border:4px solid #c6c7ca;
+    box-shadow: 2px 2px 2px black;
+}
+
+
+/*CONFIGURAR OS RADIOS DA ETAPA 1*/
+label.lblPrincipal {
+    font-family: 'Bodoni MT Condensed';
+    font-size: 24pt;
+    margin: 10px 30px 30px 40px;
+    padding: 5px;
+}
+label.lblPrincipal > input { /* IMAGE STYLES */
+    cursor: pointer;
+    border:2px solid transparent;
+}
+label.lblPrincipal:hover {
+    cursor: pointer;
+    border: 2px #c6c7ca none;
+
+}
+
+input.inputsPrincipal:checked {
+    border:2px solid #c6c7ca;
+    transition: 0.2s;
+}
+
+
+/* CENTRALIZAR AS LABELS DA ETAPA 2 */
+label#lblIncluir {
+    margin-left: 22px;
+}
+label#lblAlterar {
+    margin-left: 18px;
+}
+label#lblExcluir {
+    margin-left: 22px;
+}
+label#lblConsultar {
+    margin-left: -1px;
+}
+
+/*================= CSS DO INSERIR ================*/
+div#DivInserir {
+    display: none;
+
+    background: #c6c7ca; 
+}
+div#DivInserir h3{
+
+    border-bottom: 2px groove black;
+
+}
+div#DivInserir form {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    padding: 40px;
+    box-sizing: border-box;
+
+
+}
+div#DivInserir form p {
+
+    text-align: left;
+    border: 2px none black;
+    margin-left: -30px;
+    width: 570px;
+    box-sizing: border-box;
+    text-align: right;
+    text-indent: 50% each-line ;
+}
+
+
+/*================= CSS DO ALTERAR ================*/
+div#DivAlterar {
+    display: none;
+    background: #c6c7ca; 
+}
+div#DivAlterar h3{
+
+    border-bottom: 2px groove black;
+
+}
+div#DivAlterar form {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    padding: 40px;
+    box-sizing: border-box;
+
+
+}
+div#DivAlterar form p {
+
+    text-align: left;
+    border: 2px none black;
+    margin-left: -30px;
+    width: 570px;
+    box-sizing: border-box;
+    text-align: right;
+    text-indent: 50% each-line ;
+}
+
+
+/*================= CSS DO EXLUIR ================*/
+div#DivExcluir {
+    display: none;
+    background: #c6c7ca; 
+}
+div#DivExcluir h3{
+
+    border-bottom: 2px groove black;
+
+}
+div#DivExcluir form {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    padding: 40px;
+    box-sizing: border-box;
+
+
+}
+div#DivExcluir form p {
+
+    border: 2px none black;
+    margin-left: -30px;
+    width: 700px;
+    box-sizing: border-box;
+    text-align: left;
+    text-indent: 50% each-line ;
+}
+
+
+/*================= CSS DO CONSULTAR ================*/
+div#DivConsultar {
+    display: none;
+    background: #c6c7ca; 
+}
+div#DivConsultar h3{
+
+    border-bottom: 2px groove black;
+
+}
+div#DivConsultar form {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    padding: 40px;
+    box-sizing: border-box;
+
+
+}
+div#DivConsultar form p {
+
+    text-align: left;
+    border: 2px none black;
+    margin-left: -30px;
+    width: 570px;
+    box-sizing: border-box;
+    text-align: right;
+    text-indent: 50% each-line ;
+}
+/*================= CSS DO DivLogout ================*/
+div#DivLogout {
+    position: relative;
+}
+
+/*================= CSS dos Botões ================*/
+input.butao {
+    margin-top: 30px;
+    margin-right: 180px;
+    padding: 10px;
+    background: #909090;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif; 
+    border:  black solid 2px;
+    border-radius: 4px;
+    transition: color 1s, border 1s;
+
+}
+
+input.butao:hover {
+    border: white solid 2px;
+    color: white;
+    cursor: pointer;
+}
+input.butaoLogin {
+    margin-left: 480px;
+    margin-top: 30px;
+    margin-right: 180px;
+    padding: 10px;
+    background: #909090;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif; 
+    border:  black solid 2px;
+    border-radius: 4px;
+    transition: color 1s, border 1s;
+
+}
+
+input.butaoLogin:hover {
+
+    border: white solid 2px;
+    color: white;
+    cursor: pointer;
+}
+
+input#butaoVoltar {
+
+    position: relative;
+    left: 350px;
+    top: 15px;
+    padding: 10px;
+    background: #909090;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 15px;
+    font-weight: bold;
+    border:  black solid 2px;
+    border-radius: 4px;
+    transition: color 1s, border 1s;
+
+}
+
+input#butaoVoltar:hover {
+
+    border: white solid 2px;
+    color: white;
+    cursor: pointer;
+}
+
+input.butaoVoltarPHP {
+
+    position: relative;
+    left: 400px;
+    top: 15px;
+    padding: 10px;
+    background: #909090;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 15px;
+    font-weight: bold;
+    border:  black solid 2px;
+    border-radius: 4px;
+    transition: color 1s, border 1s;
+
+}
+
+input.butaoVoltarPHP:hover {
+
+    border: white solid 2px;
+    color: white;
+    cursor: pointer;
+}
+input.butaoLogout {
+    position: absolute;
+    margin-left: 590px;
+    margin-top: -59px;
+    padding: 10px;
+    background: #909090;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif; 
+    border:  black solid 2px;
+    border-radius: 4px;
+    transition: color 1s, border 1s;
+
+}
+
+input.butaoLogout:hover {
+    border: white solid 2px;
+    color: white;
+    cursor: pointer;
+}
+
+img.Ampulheta {
+    position: absolute; 
+    width: 70px;
+    top: 40px;
+}
+
+/*Profile --Template */
+.Profile {
+    position: absolute;
+    font-size: 15pt;
+    margin-left: 435px;
+    margin-top: -50px;
+}
+.Profile:hover {
+    cursor: pointer;
+    color: #909090;
+}
+
