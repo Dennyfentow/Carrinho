@@ -5,7 +5,7 @@
 $hostname = "localhost";
 $username1 = "root";
 $senha = "usbw";
-$banco = "almoxarifado";
+$banco = "u947965840_almox";
 
 
 /*$hostname = "mysql.hostinger.com.br";
