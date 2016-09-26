@@ -1,6 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/estilo.css" rel="stylesheet" type="text/css"/>
-<table class='cssTemplate'>
+<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/verificacaoTabela.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<table class='cssTemplate table table-hover'>
     <thead>
         
     <tr>
@@ -22,3 +25,4 @@
 </tdiv>
 </tbody>
 </table>
+<script src="../../js/bootstrap.min.js"></script>
