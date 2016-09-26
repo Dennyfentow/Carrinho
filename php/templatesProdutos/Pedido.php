@@ -73,18 +73,31 @@
 
 
 
-            //Logo dps de setar as sessões, retira do estoque
-            if ((isset($_POST[$codstr])) && ($ProdutoSetado > 0)) { //esse produtoSetado n sei como usar
+            //Logo dps de setar as sessões, verificar e retira do estoque
+            if ((isset($_POST[$codstr])) && ($ProdutoSetado > 0)) { //esse produtoSetado é para caso não tenha produtos no carrinho
                 $codigoCar = $_SESSION['Carrinho']['CarCodigo' . $x];
                 $QtdeReqCar = $_SESSION['Carrinho']['CarQtdeReq' . $x];
-                $sql = "UPDATE `estoque` SET `est_qtd` = `est_qtd` - $QtdeReqCar WHERE `estoque`.`est_cod` = $codigoCar";
-                $qr = mysql_query($sql) or die(mysql_error());
-                $ProdutoSetado = 0; // não sei se ta certo o uso disso, era só pra caso n tenha nenhum produto selecionado
-                echo "";
+				$Result = mysql_query("select est_qtd, est_pto  from estoque WHERE `estoque`.`est_cod` = $codigoCar");
+				$pontoReposicao = mysql_query("select est_pto from estoque WHERE `estoque`.`est_cod` = $codigoCar");
+				echo "<br><br>_____________: $pontoReposicao";
+				echo "<br><br>_____________: ".$qtdeNoEstoque;
+				if($qtdeNoEstoque >= $pontoReposicao){
+					$sql = "UPDATE `estoque` SET `est_qtd` = `est_qtd` - $QtdeReqCar WHERE `estoque`.`est_cod` = $codigoCar";
+              	  	$qr = mysql_query($sql) or die(mysql_error());
+	                $ProdutoSetado = 0; // zerar variavel, pois a compra ja foi efetuada
+					echo "";
 
-                echo" __________________________________________________________________" . "<br>";
+	                echo" __________________________________________________________________" . "<br>";	
+				}else {
+					if($qtdeNoEstoque == 0) {
+						echo "Sinto Muito, sem Produtos No Estoque, por favor aguarde a reposição!";
+					}
+					if($ProdutoSetado == 0) {
+						echo "Por favor adicione Produtos no Carrinho para realizar um Pedido!";
+					}
+				} 
             }
-            if (isset($_POST[$codstr])) {
+            if (isset($_POST[$codstr])) { //Verificação Importante para ver quais produtos vieram..
                   //Enviar Por Email / incrementar cada produto
                     $mensCada = " __________________________________________________________________" . "\n".
                                 "Nome do Produto: " . $_SESSION['Carrinho']['CarNome' . $x] . "\n" .
@@ -103,7 +116,7 @@
         $enviaremail = mail($destino, $assunto, $mensagem);
         
         
-        echo "<br>" . "O valor total do pedido e: R$ $precoTotalCompra" . "<br>";
+        echo "<br>" . "O valor total do pedido e: R$ ".number_format($precoTotalCompra, 2, ',', '.') . "<br>";
         session_unset('Carrinho');
         mysql_close($conexao);
         ?>
