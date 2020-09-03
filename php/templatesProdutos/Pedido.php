@@ -77,8 +77,8 @@
             if ((isset($_POST[$codstr])) && ($ProdutoSetado > 0)) { //esse produtoSetado é para caso não tenha produtos no carrinho
                 $codigoCar = $_SESSION['Carrinho']['CarCodigo' . $x];
                 $QtdeReqCar = $_SESSION['Carrinho']['CarQtdeReq' . $x];
-				$Result = mysql_query("select est_qtd, est_pto  from estoque WHERE `estoque`.`est_cod` = $codigoCar");
-				$pontoReposicao = mysql_query("select est_pto from estoque WHERE `estoque`.`est_cod` = $codigoCar");
+				$Result = mysql_query("select est_qtd, est_pto from estoque WHERE `estoque`.`est_cod` = $codigoCar");
+				$pontoReposicao = mysql_result($Result, 0, "");
 				echo "<br><br>_____________: $pontoReposicao";
 				echo "<br><br>_____________: ".$qtdeNoEstoque;
 				if($qtdeNoEstoque >= $pontoReposicao){
